@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create new list item
         const listItem = document.createElement('li');
         listItem.textContent = taskText;
+        listItem.classList.add('task-item');  // Adding class to list item
 
         // Create remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
         removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn');  // Adding class to remove button
         removeButton.onclick = () => {
             taskList.removeChild(listItem);
         };
